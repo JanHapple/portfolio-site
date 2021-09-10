@@ -1,0 +1,384 @@
+@import "mixins.scss";
+@import "mainMedium.scss";
+@import "mainBig.scss";
+@import "typographie.scss";
+@import "reset.scss";
+@import "variables.scss";
+@import "icons.scss";
+
+//* Mobile
+//* mobile Grid
+body {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 100vw;
+  grid-template-rows: 150px 1fr 100px;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/coding_landingpage.jpg);
+  background-size: 200% 200%;
+}
+
+//* Header
+.header-mobile-xs {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  grid-area: header;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  height: 150px;
+  background-color: $bgcolor;
+  border-bottom: 2px solid $generalcolor;
+  box-shadow: 2px 2px 6px black;
+}
+
+.home-link-header {
+  text-decoration: none;
+  text-align: center;
+}
+
+.brand-sign {
+  font-size: $brandheading;
+}
+
+.brand-claim {
+  margin-top: 10px;
+  font-size: $generaltext;
+}
+
+//* Main
+//* Main Container / Flex
+
+// .bg-overlay {
+//     background-color: red;
+// }
+
+.flex-box {
+  grid-area: main;
+  background-color: $bgcolor-main;
+  // opacity: 0.7;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about {
+  @include sections-xs;
+  margin: 50px 0 100px 0;
+}
+
+#skills {
+  @include sections-xs;
+  margin: 0 0 100px 0;
+
+  .list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    text-align: justify;
+  }
+
+  li {
+    list-style: none;
+    font-size: $generaltext;
+    // &::before {
+    //         font-family: "Font Awesome";
+    //         content: "\f101";
+    //         margin-right: 10px;
+    // }
+  }
+}
+
+//* #Skills section "Bring it all together"
+.combine {
+  width: 100%;
+  padding: 20px;
+  margin: 20px 0 0 0;
+  border: solid 2px $brandcolor;
+  background-color: $bgcolor;
+  font-size: $generaltext;
+  text-align: justify;
+  border-radius: 10px;
+}
+
+//* Trying to implement rounded triangle
+// .down {
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+
+// }
+
+// .fa-sort-down {
+//     margin: -50px auto;
+// }
+
+#work {
+  @include sections-xs;
+  margin: 0 0 100px 0;
+
+  .pic-link {
+    text-decoration: none;
+    color: $generalcolor;
+  }
+
+  .pic-project1 {
+    background-image: url(../images/surf.png);
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+
+  .pic-project2 {
+    background-image: url(../images/fitness.png);
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .pic-project3 {
+    background-image: url(../images/skate.png);
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: $generaltext;
+  }
+}
+
+#contact {
+  @include sections-xs;
+  margin-bottom: 200px;
+}
+
+//* Form
+form {
+  margin-top: 10px;
+
+  label,
+  input,
+  button,
+  textarea {
+    display: block;
+    margin-top: 5px;
+  }
+
+  label {
+    font-size: $generaltext;
+    font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    font-family: "Antonio", Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    padding: 10px;
+    background-color: rgb(31, 31, 31);
+    color: white;
+
+    &:focus {
+      outline: none;
+      background-color: rgb(77, 77, 77);
+    }
+  }
+
+  textarea {
+    z-index: 0;
+    // position: relative;
+    resize: none;
+    font-family: "Antonio", Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    background-color: rgb(31, 31, 31);
+
+    &:focus {
+      outline: none;
+      background-color: rgb(77, 77, 77);
+    }
+
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     border-bottom: solid 2px $btncolor;
+    //     z-index: -1;
+    //     transform: scaleX(0);
+    //     transform-origin: right;
+    //     transition: transform 250ms ease-in;
+    // }
+
+    // &:focus::after {
+    //     transform: scaleX(1);
+    //     transform-origin: left;
+    // }
+  }
+
+  button {
+    
+    border: 2px solid $brandcolor;
+    border-radius: 5px;
+    background-color: $bgcolor;
+    color: $btncolor;
+    font-weight: bold;
+    font-size: $m;
+    width: 100%;
+    height: 40px;
+    box-shadow: 2px 2px 3px black;
+    text-shadow: 2px 2px 3px black;
+  }
+}
+
+//* Trying to implement Clip-path to h5
+// .clip-path {
+//     position: relative;
+//     background: url(../images/coding_landingpage.jpg);
+//     background-size: cover;
+//     background-clip: text;
+//     color: transparent;
+//     font-size: 3rem;
+
+// }
+
+// .clip-path:after {
+//     content: "";
+//     position: absolute;
+//     text-shadow: 5px 5px $generalcolor;
+// }
+
+//* Social Media Section
+.social {
+  position: fixed;
+  bottom: 100px;
+  width: 100%;
+
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: $generalcolor;
+}
+
+//* Footer
+.footer-mobile-xs {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  background-color: $bgcolor;
+  width: 100%;
+  height: 100px;
+  border-top: 2px solid $generalcolor;
+  border-bottom: none;
+  box-shadow: -2px -2px 6px black;
+  z-index: 3;
+
+  a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    
+  }
+
+  .btn-xs {
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    background-color: transparent;
+    color: $btncolor;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+  }
+
+  .nav-btn {
+    border-right: 2px solid $brandcolor;
+  }
+
+  .last-nav-btn {
+    border-right: none;
+  }
+
+  // .footer-mobile-xs a:last-of-type .btn-xs {
+    
+  //   border: none;
+    
+  // }
+}
+
+@media only screen  
+    and (max-width: 823px)
+    and (orientation: landscape)    
+{
+
+    body {
+        display: grid;
+        grid-template-areas:
+          "main"
+          "footer";
+        grid-template-columns: 100vw;
+        grid-template-rows: 1fr 100px;
+        width: 100vw;
+        height: 100vh;
+        background: url(../images/coding_landingpage.jpg);
+        background-size: 200% 200%;
+    }
+
+    .header-mobile-xs{
+        display: none;
+    }
+
+    #about {
+        @include sections-xs;
+        margin: 20px 0 100px 0;
+    }
+
+    .social {
+        display: none;
+    }
+
+    // .footer-mobile-xs {
+    //     display: none;
+    // }
+}
+
+//* Invisible
+//* Sidebar on mobile devices hidden
+.side-nav-md {
+  display: none;
+}
+
+//* Header changes on different devices
+.header-md {
+  display: none;
+}

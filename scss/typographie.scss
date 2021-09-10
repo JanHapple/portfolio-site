@@ -1,0 +1,35 @@
+@import "variables.scss";
+
+:root {
+  font-size: 62.5%;
+  font-family: "Antonio", Arial, Helvetica, sans-serif;
+}
+
+body {
+  color: $generalcolor;
+}
+
+h1 {
+  font-family: "Zen Dots", cursive;
+  font-weight: 600;
+  color: $brandcolor;
+  text-shadow: 5px 5px black;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Source Code Pro", monospace;
+}
+
+h2 {
+  color: $btncolor;
+  text-shadow: 3px 3px black;
+}
+
+h5 {
+  color: $listheading;
+  text-shadow: 3px 3px black;
+  margin: 20px 0 10px 0;
+}

@@ -1,0 +1,230 @@
+//* Main Page for MEDIUM DEVICES
+@import "mixins.scss";
+@import "variables.scss";
+
+
+@media (min-width: 768px) {
+    body {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "aside main";
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: 120px 1fr;
+    }
+  
+    .side-nav-md {
+      grid-area: aside;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 20.125vh);
+  
+      position: fixed;
+      top: 19.2vh;
+  
+      /* position: fixed;
+          top: 19.5vh; */
+      background-color: $bgcolor;
+      
+      
+  
+      width: 200px;
+      height: 100%;
+      border-right: 2px solid $generalcolor;
+  
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20.125vh;
+        text-decoration: none;
+        // border: 1px red solid;
+      }
+    }
+  
+    .btn-xs {
+      border: none;
+      border-top: none;
+      border-left: none;
+      border-bottom: 2px solid $brandcolor;
+      background-color: transparent;
+      color: $btncolor;
+      font-weight: bold;
+      width: 100%;
+      height: 100%;
+      font-size: $btn-text;
+      text-shadow: 2px 2px 3px black;
+    }
+  
+    .header-md {
+      grid-area: header;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 120px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $bgcolor;
+      border-bottom: 2px solid $generalcolor;
+    }
+  
+    .home-link-header-md {
+      display: flex;
+      flex-flow: column;
+      text-decoration: none;
+      text-align: center;
+      padding: 15px;
+    }
+  
+    .brand-sign-md {
+      font-size: $brandheading;
+    }
+  
+    .brand-claim {
+      font-size: $subheadings;
+    }
+  
+    .social-md {
+      display: flex;
+      width: 25%;
+      justify-content: space-around;
+      align-items: center;
+    }
+  
+    #about {
+      @include sections-xs;
+      .clip-path-heading {
+        font-size: $headings;
+      }
+  
+      .description-xs {
+        font-size: $generaltext;
+      }
+  
+      margin: 50px 0 100px 0;
+    }
+  
+    #skills {
+      .clip-path-heading {
+        font-size: $headings;
+      }
+  
+      .description-xs {
+        font-size: $generaltext;
+        text-align: justify;
+      }
+  
+      li {
+        list-style: none;
+        font-size: $generaltext;
+      }
+  
+      h5 {
+        font-size: $subheadings;
+      }
+  
+      .combine {
+        font-size: $generaltext;
+      }
+    }
+  
+    #work {
+      @include sections-xs;
+      margin: 0 0 100px 0;
+      .clip-path-heading {
+        font-size: $headings;
+      }
+  
+      .description-xs {
+        font-size: $generaltext;
+      }
+  
+      h5 {
+        font-size: $subheadings;
+      }
+  
+      .pic-link {
+        text-decoration: none;
+        color: $generalcolor;
+        text-align: center;
+      }
+  
+      .pic-project1 {
+        background-image: url(../images/surf.png);
+        background-size: cover;
+        width: 20vw;
+        height: 120px;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+  
+      .pic-project2 {
+        background-image: url(../images/fitness.png);
+        background-size: cover;
+        width: 20vw;
+        height: 120px;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+  
+      .pic-project3 {
+        background-image: url(../images/skate.png);
+        background-size: cover;
+        width: 20vw;
+        height: 120px;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+  
+      p {
+        font-size: $generaltext;
+      }
+  
+      .project-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  
+    #contact {
+      @include sections-xs;
+      margin-bottom: 200px;
+  
+      .clip-path-heading {
+        font-size: $headings;
+      }
+  
+      .description-xs {
+        font-size: $generaltext;
+      }
+  
+      h5 {
+        font-size: $subheadings;
+      }
+  
+      label,
+      input,
+      textarea {
+        font-size: 1.8rem;
+      }
+    }
+  
+    //* Invisible
+    .header-mobile-xs {
+      display: none;
+    }
+  
+    .footer-mobile-xs {
+      display: none;
+    }
+  
+    .social {
+      display: none;
+    }
+  }

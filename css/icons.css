@@ -1,0 +1,32 @@
+.fa-chevron-left,
+.fa-chevron-right,
+.fa-sort-down {
+  color: #f84e66 !important;
+}
+
+.fa-terminal {
+  color: #f84e66 !important;
+}
+
+.fa-github,
+.fa-linkedin,
+.fa-xing-square {
+  color: #2BA473 !important;
+  opacity: 0.7;
+  font-size: 1.5vw;
+}
+.fa-github:hover,
+.fa-linkedin:hover,
+.fa-xing-square:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.fab,
+.fas,
+.far {
+  color: #F67C38;
+  text-shadow: 1px 1px 2px black;
+}
+
+/*# sourceMappingURL=icons.css.map */

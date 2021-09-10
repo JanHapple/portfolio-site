@@ -1,0 +1,342 @@
+@media (min-width: 1200px) {
+  body {
+    background-size: 180% 180%;
+  }
+
+  .side-nav-md {
+    grid-area: aside;
+    position: fixed;
+    top: 19.5vh;
+    background-color: #22333b;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 200px;
+    height: 100%;
+    border-right: 2px solid #C1B2AB;
+  }
+  .side-nav-md a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20.125vh;
+    text-decoration: none;
+    border: 1px red solid;
+  }
+
+  .btn-xs-1 {
+    border: none;
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px solid #f84e66;
+    background-color: transparent;
+    color: #2BA473;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5vw;
+    text-shadow: 2px 2px 3px black;
+    z-index: 1;
+  }
+  .btn-xs-1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 22.1%;
+    background-color: #f84e66;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+  }
+  .btn-xs-1:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  .btn-xs-1:hover {
+    cursor: pointer;
+  }
+
+  .btn-xs-2 {
+    border: none;
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px solid #f84e66;
+    background-color: transparent;
+    color: #2BA473;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5vw;
+    text-shadow: 2px 2px 3px black;
+    z-index: 1;
+  }
+  .btn-xs-2::after {
+    content: "";
+    position: absolute;
+    top: 22%;
+    left: 0;
+    width: 100%;
+    height: 22.4%;
+    background-color: #f84e66;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+  }
+  .btn-xs-2:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  .btn-xs-2:hover {
+    cursor: pointer;
+  }
+
+  .btn-xs-3 {
+    border: none;
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px solid #f84e66;
+    background-color: transparent;
+    color: #2BA473;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5vw;
+    text-shadow: 2px 2px 3px black;
+    z-index: 1;
+  }
+  .btn-xs-3::after {
+    content: "";
+    position: absolute;
+    top: 44.2%;
+    left: 0;
+    width: 100%;
+    height: 22.5%;
+    background-color: #f84e66;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+  }
+  .btn-xs-3:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  .btn-xs-3:hover {
+    cursor: pointer;
+  }
+
+  .btn-xs-4 {
+    border: none;
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px solid #f84e66;
+    background-color: transparent;
+    color: #2BA473;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5vw;
+    text-shadow: 2px 2px 3px black;
+    z-index: 1;
+  }
+  .btn-xs-4::after {
+    content: "";
+    position: absolute;
+    top: 66.8%;
+    left: 0;
+    width: 100%;
+    height: 22%;
+    background-color: #f84e66;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+  }
+  .btn-xs-4:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  .btn-xs-4:hover {
+    cursor: pointer;
+  }
+
+  #about {
+    width: 90%;
+    padding: 20px;
+    width: 70%;
+    margin: 100px 0 100px 0;
+  }
+  #about .clip-path-heading {
+    margin-bottom: 20px;
+  }
+  #about .description-xs {
+    font-size: 1vw;
+    text-align: justify;
+  }
+  #about .clip-path-heading {
+    font-size: 1.5vw;
+  }
+  #about .description-xs {
+    font-size: 1vw;
+  }
+
+  #skills {
+    width: 70%;
+  }
+  #skills .clip-path-heading {
+    font-size: 1.5vw;
+  }
+  #skills .description-xs {
+    font-size: 1vw;
+    text-align: justify;
+  }
+  #skills .list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    text-align: justify;
+  }
+  #skills li {
+    list-style: none;
+    font-size: 1vw;
+  }
+  #skills h5 {
+    font-size: 1.5vw;
+  }
+  #skills .combine {
+    font-size: 1vw;
+  }
+
+  #work {
+    width: 90%;
+    padding: 20px;
+    width: 70%;
+    margin: 0 0 100px 0;
+  }
+  #work .clip-path-heading {
+    margin-bottom: 20px;
+  }
+  #work .description-xs {
+    font-size: 1vw;
+    text-align: justify;
+  }
+  #work .clip-path-heading {
+    font-size: 1.5vw;
+  }
+  #work .description-xs {
+    font-size: 1vw;
+  }
+  #work h5 {
+    font-size: 1.5vw;
+  }
+  #work .pic-link {
+    text-decoration: none;
+    color: #C1B2AB;
+    text-align: center;
+  }
+  #work .pic-project1 {
+    background-image: url(../images/surf.png);
+    background-size: cover;
+    width: 19vw;
+    height: 250px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  #work .pic-project2 {
+    background-image: url(../images/fitness.png);
+    background-size: cover;
+    width: 19vw;
+    height: 250px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  #work .pic-project3 {
+    background-image: url(../images/skate.png);
+    background-size: cover;
+    width: 19vw;
+    height: 250px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  #work p {
+    font-size: 1vw;
+  }
+  #work .project-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #contact {
+    width: 90%;
+    padding: 20px;
+    width: 70%;
+    margin-bottom: 100px;
+  }
+  #contact .clip-path-heading {
+    margin-bottom: 20px;
+  }
+  #contact .description-xs {
+    font-size: 1vw;
+    text-align: justify;
+  }
+  #contact .clip-path-heading {
+    font-size: 1.5vw;
+  }
+  #contact .description-xs {
+    font-size: 1vw;
+  }
+  #contact h5 {
+    font-size: 3rem;
+  }
+  #contact label,
+#contact input,
+#contact textarea {
+    font-size: 1vw;
+  }
+  #contact button {
+    border: 2px solid #f84e66;
+    border-radius: 5px;
+    background-color: transparent;
+    background-color: #22333b;
+    color: #2BA473;
+    font-weight: bold;
+    font-size: 1.5vw;
+    width: 100%;
+    height: 40px;
+    box-shadow: 2px 2px 3px black;
+    text-shadow: 2px 2px 3px black;
+    z-index: 0;
+  }
+  #contact button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f84e66;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+  }
+  #contact button:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  #contact button:hover {
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=mainBig.css.map */
