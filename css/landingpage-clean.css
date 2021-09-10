@@ -4,21 +4,18 @@
 }
 
 body {
+  font-size: 2rem;
   color: #C1B2AB;
 }
 
-h1 {
+h1, h2, h3, h4, h5 {
   font-family: "Zen Dots", cursive;
-  font-weight: 600;
-  color: #f84e66;
-  text-shadow: 5px 5px black;
 }
 
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Source Code Pro", monospace;
+h1 {
+  font-size: 4rem;
+  color: #f84e66;
+  text-shadow: 5px 5px black;
 }
 
 h2 {
@@ -26,17 +23,10 @@ h2 {
   text-shadow: 3px 3px black;
 }
 
-h5 {
-  color: #2375A9;
-  text-shadow: 3px 3px black;
-  margin: 20px 0 10px 0;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -63,12 +53,12 @@ body {
 }
 
 .brand-sign {
-  font-size: 13vw;
+  font-size: 4rem;
 }
 
 .brand-claim {
   margin-top: 10px;
-  font-size: 4vw;
+  font-size: 1.5rem;
 }
 
 .flex-box {
@@ -83,16 +73,16 @@ body {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 80%;
   height: 80%;
-  padding: 2rem;
+  padding: 30px;
   border: 2px solid #C1B2AB;
   border-radius: 10px;
   background: #22333b;
   opacity: 0.9;
 }
 .info-box-xs .description-xs {
-  font-size: 3.5vw;
+  font-size: 1.5rem;
   text-align: justify;
 }
 .info-box-xs .social {
@@ -104,7 +94,6 @@ body {
 .info-box-xs .fab {
   color: #2BA473;
   text-shadow: 1px 1px 2px black;
-  font-size: 9vw;
 }
 
 .footer-mobile-xs {
@@ -152,16 +141,16 @@ body {
   }
 
   .brand {
-    margin-top: 8rem;
     text-align: center;
   }
 
   .brand-sign {
-    font-size: 8vw;
+    font-size: 7rem;
   }
 
   .brand-claim {
-    font-size: 3vw;
+    margin-top: 10px;
+    font-size: 2.4rem;
   }
 
   .info-box-xs {
@@ -173,17 +162,17 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 90%;
-    height: 80%;
-    padding: 5rem 10rem;
+    width: 85%;
+    height: 85%;
+    padding: 50px;
     border: 2px solid #C1B2AB;
-    border-radius: 2rem;
+    border-radius: 10px;
     background: #22333b;
     opacity: 0.9;
     overflow: hidden;
   }
   .info-box-large .description {
-    font-size: 2.5vw;
+    font-size: 2rem;
     text-align: justify;
     margin: 50px 0;
   }
@@ -192,7 +181,6 @@ body {
     margin-top: 50px;
     display: flex;
     justify-content: center;
-    font-size: 2.5vw;
   }
   .info-box-large .fab {
     padding: 30px;
@@ -217,7 +205,7 @@ body {
     background-color: transparent;
     color: #2BA473;
     font-weight: bold;
-    font-size: 2.5vw;
+    font-size: 2rem;
     width: 12vw;
     height: 80px;
     border-radius: 5px;
