@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 // Buttons
 @mixin buttons {
     position: relative;
@@ -5,7 +7,7 @@
     background-color: transparent;
     color: $btncolor;
     font-weight: bold;
-    font-size: $m;
+    font-size: $btn-text-medium;
     width: 12vw;
     height: 80px;
     border-radius: 5px;
@@ -48,7 +50,7 @@
     }
 
     .description-xs {
-        font-size: $xs;
+        font-size: 22px;
         text-align: justify;
     }
 }

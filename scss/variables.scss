@@ -8,14 +8,25 @@ $linkcolor: #F67C38;
 $listheading: #2375A9;
 
 // Font-Sizes
-$xs: 1.5rem;
-$s: 1.8rem;
-$m: 2rem;
-$l: 2.5rem;
-$xl: 4rem;
-$xxl: 7rem;
-$responsive: 0.7em;
+// $xs: 1.5vw;
+// $s: 1.8vw;
+// $m: 2vw;
+// $l: 2.5vw;
+// $xl: 4vw;
+// $xxl: 7vw;
+// $responsive: 0.7vw;
+//* Small devices
+$brandheading: 13vw;
+$brandsubheading: 4vw;
+$headings: 4vw;
+$generaltext: 3.5vw;
+$btn-text: 9vw;
+$brandheading: 13vw;
 
-
+//* Medium devices
+$brandheading-medium: 8vw;
+$brandsubheading-medium: 3vw;
+$generaltext-medium: 2.5vw;
+$btn-text-medium: 2.5vw;
 
 
