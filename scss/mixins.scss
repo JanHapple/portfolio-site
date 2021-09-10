@@ -1,15 +1,10 @@
-@import "variables.scss";
-
-// Buttons
 @mixin buttons {
     position: relative;
-    border: 3px solid $brandcolor;
+    border: 3px solid $btncolor;
     background-color: transparent;
     color: $btncolor;
     font-weight: bold;
-    font-size: $btn-text-medium;
-    width: 12vw;
-    height: 80px;
+    // padding: 15px 30px;
     border-radius: 5px;
     box-shadow: 2px 2px 3px black;
     text-shadow: 2px 2px 3px black;
@@ -37,20 +32,5 @@
 
     &:hover {
         cursor: pointer;
-    }
-}
-
-// Sections
-@mixin sections-xs {
-    width: 90%;
-    padding: 20px;
-    
-    .clip-path-heading {
-        margin-bottom: 20px;
-    }
-
-    .description-xs {
-        font-size: $generaltext;
-        text-align: justify;
     }
 }

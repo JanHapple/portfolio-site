@@ -1,10 +1,7 @@
 @import "mixins.scss";
-@import "mainMedium.scss";
-@import "mainBig.scss";
 @import "typographie.scss";
 @import "reset.scss";
 @import "variables.scss";
-@import "icons.scss";
 
 //* Mobile
 //* mobile Grid
@@ -47,12 +44,12 @@ body {
 }
 
 .brand-sign {
-  font-size: $brandheading;
+  font-size: $xl;
 }
 
 .brand-claim {
   margin-top: 10px;
-  font-size: $generaltext;
+  font-size: $xs;
 }
 
 //* Main
@@ -64,7 +61,7 @@ body {
 
 .flex-box {
   grid-area: main;
-  background-color: $bgcolor-main;
+  background-color: $bgcolor;
   // opacity: 0.7;
   display: flex;
   flex-flow: column;
@@ -90,7 +87,7 @@ body {
 
   li {
     list-style: none;
-    font-size: $generaltext;
+    font-size: $xs;
     // &::before {
     //         font-family: "Font Awesome";
     //         content: "\f101";
@@ -99,14 +96,13 @@ body {
   }
 }
 
-//* #Skills section "Bring it all together"
 .combine {
   width: 100%;
   padding: 20px;
   margin: 20px 0 0 0;
   border: solid 2px $brandcolor;
   background-color: $bgcolor;
-  font-size: $generaltext;
+  font-size: $xs;
   text-align: justify;
   border-radius: 10px;
 }
@@ -162,7 +158,7 @@ body {
   }
 
   p {
-    font-size: $generaltext;
+    font-size: $xs;
   }
 }
 
@@ -184,7 +180,7 @@ form {
   }
 
   label {
-    font-size: $generaltext;
+    font-size: $xs;
     font-weight: bold;
   }
 
@@ -244,9 +240,9 @@ form {
   }
 
   button {
-    
     border: 2px solid $brandcolor;
     border-radius: 5px;
+    background-color: transparent;
     background-color: $bgcolor;
     color: $btncolor;
     font-weight: bold;
@@ -307,78 +303,617 @@ form {
     width: 100%;
     height: 100%;
     text-decoration: none;
-    
   }
 
   .btn-xs {
     border-top: none;
     border-bottom: none;
-    border-left: none;
+    border-left: 1px solid $brandcolor;
+    border-right: 1px solid $brandcolor;
     background-color: transparent;
     color: $btncolor;
     font-weight: bold;
     width: 100%;
     height: 100%;
   }
-
-  .nav-btn {
-    border-right: 2px solid $brandcolor;
-  }
-
-  .last-nav-btn {
-    border-right: none;
-  }
-
-  // .footer-mobile-xs a:last-of-type .btn-xs {
-    
-  //   border: none;
-    
-  // }
-}
-
-@media only screen  
-    and (max-width: 823px)
-    and (orientation: landscape)    
-{
-
-    body {
-        display: grid;
-        grid-template-areas:
-          "main"
-          "footer";
-        grid-template-columns: 100vw;
-        grid-template-rows: 1fr 100px;
-        width: 100vw;
-        height: 100vh;
-        background: url(../images/coding_landingpage.jpg);
-        background-size: 200% 200%;
-    }
-
-    .header-mobile-xs{
-        display: none;
-    }
-
-    #about {
-        @include sections-xs;
-        margin: 20px 0 100px 0;
-    }
-
-    .social {
-        display: none;
-    }
-
-    // .footer-mobile-xs {
-    //     display: none;
-    // }
 }
 
 //* Invisible
-//* Sidebar on mobile devices hidden
+.info-box-large {
+  display: none;
+}
+
 .side-nav-md {
   display: none;
 }
 
-//* Header changes on different devices
 .header-md {
   display: none;
+}
+
+//* MEDIUM DEVICES
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "aside main";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 120px 1fr;
+  }
+
+  .side-nav-md {
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 20.125vh);
+
+    position: fixed;
+    top: 19.2vh;
+
+    /* position: fixed;
+        top: 19.5vh; */
+    background-color: $bgcolor;
+    
+    
+
+    width: 200px;
+    height: 100%;
+    border-right: 2px solid $generalcolor;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 20.125vh;
+      text-decoration: none;
+      // border: 1px red solid;
+    }
+  }
+
+  .btn-xs {
+    border: none;
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px solid $brandcolor;
+    background-color: transparent;
+    color: $btncolor;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    font-size: $m;
+    text-shadow: 2px 2px 3px black;
+  }
+
+  .header-md {
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bgcolor;
+    border-bottom: 2px solid $generalcolor;
+  }
+
+  .home-link-header-md {
+    display: flex;
+    flex-flow: column;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .brand-sign-md {
+    font-size: $xl;
+  }
+
+  .brand-claim {
+    font-size: 0.8rem;
+  }
+
+  .social-md {
+    display: flex;
+    width: 25%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #about {
+    @include sections-xs;
+    .clip-path-heading {
+      font-size: $xl;
+    }
+
+    .description-xs {
+      font-size: $m;
+    }
+
+    margin: 50px 0 100px 0;
+  }
+
+  #skills {
+    .clip-path-heading {
+      font-size: $xl;
+    }
+
+    .description-xs {
+      font-size: $m;
+      text-align: justify;
+    }
+
+    li {
+      list-style: none;
+      font-size: $m;
+    }
+
+    h5 {
+      font-size: $l;
+    }
+
+    .combine {
+      font-size: $m;
+    }
+  }
+
+  #work {
+    @include sections-xs;
+    margin: 0 0 100px 0;
+    .clip-path-heading {
+      font-size: $xl;
+    }
+
+    .description-xs {
+      font-size: $m;
+    }
+
+    h5 {
+      font-size: $l;
+    }
+
+    .pic-link {
+      text-decoration: none;
+      color: $generalcolor;
+      text-align: center;
+    }
+
+    .pic-project1 {
+      background-image: url(../images/surf.png);
+      background-size: cover;
+      width: 20vw;
+      height: 120px;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .pic-project2 {
+      background-image: url(../images/fitness.png);
+      background-size: cover;
+      width: 20vw;
+      height: 120px;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .pic-project3 {
+      background-image: url(../images/skate.png);
+      background-size: cover;
+      width: 20vw;
+      height: 120px;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: $m;
+    }
+
+    .project-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  #contact {
+    @include sections-xs;
+    margin-bottom: 200px;
+
+    .clip-path-heading {
+      font-size: $xl;
+    }
+
+    .description-xs {
+      font-size: $m;
+    }
+
+    h5 {
+      font-size: $l;
+    }
+
+    label,
+    input,
+    textarea {
+      font-size: 1.8rem;
+    }
+  }
+
+  //* Invisible
+  .header-mobile-xs {
+    display: none;
+  }
+
+  .footer-mobile-xs {
+    display: none;
+  }
+
+  .social {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-size: 180% 180%;
+  }
+
+  .side-nav-md {
+    grid-area: aside;
+    position: fixed;
+    top: 19.5vh;
+    background-color: $bgcolor;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 200px;
+    height: 100%;
+    border-right: 2px solid $generalcolor;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 20.125vh;
+      text-decoration: none;
+      // border: 1px red solid;
+    }
+  }
+
+  .btn-xs-1 {
+    border: none;
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px solid $brandcolor;
+    background-color: transparent;
+    color: $btncolor;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    font-size: $m;
+    text-shadow: 2px 2px 3px black;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 22.1%;
+      background-color: $brandcolor;
+      z-index: -1;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 250ms ease-in;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .btn-xs-2 {
+    border: none;
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px solid $brandcolor;
+    background-color: transparent;
+    color: $btncolor;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    font-size: $m;
+    text-shadow: 2px 2px 3px black;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 22%;
+      left: 0;
+      width: 100%;
+      height: 22.4%;
+      background-color: $brandcolor;
+      z-index: -1;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 250ms ease-in;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .btn-xs-3 {
+    border: none;
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px solid $brandcolor;
+    background-color: transparent;
+    color: $btncolor;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    font-size: $m;
+    text-shadow: 2px 2px 3px black;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 44.2%;
+      left: 0;
+      width: 100%;
+      height: 22.5%;
+      background-color: $brandcolor;
+      z-index: -1;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 250ms ease-in;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .btn-xs-4 {
+    border: none;
+    border-top: none;
+    border-left: none;
+    border-bottom: 2px solid $brandcolor;
+    background-color: transparent;
+    color: $btncolor;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    font-size: $m;
+    text-shadow: 2px 2px 3px black;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 66.8%;
+      left: 0;
+      width: 100%;
+      height: 22%;
+      background-color: $brandcolor;
+      z-index: -1;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 250ms ease-in;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  #about {
+    @include sections-xs;
+    width: 70%;
+
+    .clip-path-heading {
+      font-size: $xl;
+    }
+
+    .description-xs {
+      font-size: $l;
+    }
+
+    margin: 100px 0 100px 0;
+  }
+
+  #skills {
+    width: 70%;
+
+    .clip-path-heading {
+      font-size: $xl;
+    }
+
+    .description-xs {
+      font-size: $l;
+      text-align: justify;
+    }
+
+    .list {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      text-align: justify;
+    }
+
+    li {
+      list-style: none;
+      font-size: $l;
+    }
+
+    h5 {
+      font-size: 3rem;
+    }
+
+    .combine {
+      font-size: $l;
+    }
+  }
+
+  #work {
+    @include sections-xs;
+    width: 70%;
+    margin: 0 0 100px 0;
+    .clip-path-heading {
+      font-size: $xl;
+    }
+
+    .description-xs {
+      font-size: $l;
+    }
+
+    h5 {
+      font-size: 3rem;
+    }
+
+    .pic-link {
+      text-decoration: none;
+      color: $generalcolor;
+      text-align: center;
+      // opacity: 0.7;
+
+      // &:hover {
+      //     opacity: 1;
+      // }
+    }
+
+    .pic-project1 {
+      background-image: url(../images/surf.png);
+      background-size: cover;
+      width: 19vw;
+      height: 250px;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .pic-project2 {
+      background-image: url(../images/fitness.png);
+      background-size: cover;
+      width: 19vw;
+      height: 250px;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .pic-project3 {
+      background-image: url(../images/skate.png);
+      background-size: cover;
+      width: 19vw;
+      height: 250px;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: $l;
+    }
+
+    .project-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  #contact {
+    @include sections-xs;
+    width: 70%;
+    margin-bottom: 100px;
+
+    .clip-path-heading {
+      font-size: $xl;
+    }
+
+    .description-xs {
+      font-size: $l;
+    }
+
+    h5 {
+      font-size: 3rem;
+    }
+
+    label,
+    input,
+    textarea {
+      font-size: $m;
+    }
+
+    button {
+      border: 2px solid $brandcolor;
+      border-radius: 5px;
+      background-color: transparent;
+      background-color: $bgcolor;
+      color: $btncolor;
+      font-weight: bold;
+      font-size: $m;
+      width: 100%;
+      height: 40px;
+      box-shadow: 2px 2px 3px black;
+      text-shadow: 2px 2px 3px black;
+      z-index: 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $brandcolor;
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 250ms ease-in;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
 }
