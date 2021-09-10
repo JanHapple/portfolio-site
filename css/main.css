@@ -1,11 +1,9 @@
-/* Error: Undefined variable.
+/* Error: Undefined mixin.
  *    ,
- * 51 |         font-size: $xs;
- *    |                    ^^^
+ * 73 |   @include sections-xs;
+ *    |   ^^^^^^^^^^^^^^^^^^^^
  *    '
- *   mixins.scss 51:20     sections-xs()
- *   mainMedium.scss 97:7  @import
- *   main.scss 2:9         root stylesheet */
+ *   main.scss 73:3  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -15,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 51 \2502          font-size: $xs;\a    \2502                     ^^^\a    \2575 \a   mixins.scss 51:20     sections-xs()\a   mainMedium.scss 97:7  @import\a   main.scss 2:9         root stylesheet";
+  content: "Error: Undefined mixin.\a    \2577 \a 73 \2502    @include sections-xs;\a    \2502    ^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   main.scss 73:3  root stylesheet";
 }
